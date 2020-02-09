@@ -2,3 +2,12 @@ div{
     border: solid 1px black;
     min-height: 50px;
 }
+
+footer {
+    width: 100%;
+    position: fixed;
+    border-top: 2px solid floralwhite;
+    background-color: goldenrod;
+    left: 0;
+    bottom: 0;
+}
