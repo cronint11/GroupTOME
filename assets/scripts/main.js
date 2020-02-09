@@ -1,12 +1,10 @@
 
-
 function displayAPIStuff(a,b,c,d) {
 /* Comments Here
   describe a,b,c,d etc...
   Name of 
 
 */
-
 };
 
 function getAPIStuff(){
@@ -23,6 +21,7 @@ function makeAjaxRequest(url, callback) {
       method: "GET"
 
     }).then(function(response){
+      
       callback(response);
     })
 };
