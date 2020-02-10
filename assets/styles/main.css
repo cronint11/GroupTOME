@@ -2,3 +2,7 @@ div{
     border: solid 1px black;
     min-height: 50px;
 }
+img{
+height: 20px;
+width: auto;
+}
