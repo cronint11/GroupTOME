@@ -9,20 +9,50 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles/main.css">
 
-    <title>Hello, world!</title>
+    <title>Google Maps</title>
   </head>
-  <body>
-    <h1>Hello, world!</h1>
+<body>
 
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1 class="display-6">Google Maps</h1>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col">
+        <input class="form-control" id="search" type="text" placeholder="Search For Beer..." />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <button type="button" type="text">Get Lucky</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
     <!-- Person A Code starts here -->
     <!-- Person A Code ends Here -->
     <!-- Person B Code starts here -->
     <!-- Person B Code ends Here -->
     <!-- Optional JavaScript -->
+    
+  </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <!--Google Maps//-->
     <script src="assets/scripts/main.js"></script>
-  </body>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=createMap&libaries=places&key=AIzaSyBbxB1MpsCcOhzGs_uZQKFlUWw4EXugmiE"
+      async defer></script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbxB1MpsCcOhzGs_uZQKFlUWw4EXugmiE&callback=initMap">
+      </script>
+    </body>
 </html>
