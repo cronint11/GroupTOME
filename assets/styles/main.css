@@ -1,8 +1,36 @@
 div{
-    border: solid 1px black;
     min-height: 50px;
 }
 img{
 height: 20px;
 width: auto;
+    background-color: ivory;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    border-top: 2px solid floralwhite;
+    background-color: gold;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+    padding: 0px;
+}
+
+body {
+    background-color: gold;
+}
+
+.row {
+    padding: 0px;
+}
+
+#selection {
+    margin-bottom: 32px; /* needs to be the same height as the footer */
+}
+
+#history, #beerNotes, #settings {
+    width: 33.33%;
+    height: 100%;
 }
