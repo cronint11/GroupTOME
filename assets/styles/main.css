@@ -1,5 +1,9 @@
 div{
     min-height: 50px;
+}
+img{
+height: 20px;
+width: auto;
     background-color: ivory;
 }
 
