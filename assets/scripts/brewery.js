@@ -10,6 +10,16 @@ function randomByCity (city) {
 };
 
 
+// REFER TO https://api.eventful.com/docs/events/search
+function beerEvents (city) {
+  var cityName = city;
+  var eventFulURL = "https://cors-anywhere.herokuapp.com/http://api.eventful.com/json/events/search?keywords=beer&app_key=dSgcPNSbCFTGkjzg&location=" + cityName;
+  makeAjaxRequest(eventFulURL, consolelogResults );
+
+}
+
+
+
 function formatPhone (number) {
   if (number.length == 7) {
     number = number.replace(/(\d{3})(\d{4})/, "$1-$2");
@@ -37,6 +47,7 @@ function renderResults (result) {
   // DEBUG   
   consolelogResults(result)
 };
+
 
 
 // DEBUG FUNCTION TO CONSOLE LOG ANYTHING
