@@ -3,6 +3,8 @@
 var breweryObjects ;
 
 
+
+
 function randomByCity (city) {
   var cityName = city;
   var beerByCityURL = "https://api.openbrewerydb.org/breweries?by_city=" + cityName;
@@ -15,21 +17,8 @@ function beerEvents (city) {
   var cityName = city;
   var eventFulURL = "https://cors-anywhere.herokuapp.com/http://api.eventful.com/json/events/search?keywords=beer&app_key=dSgcPNSbCFTGkjzg&location=" + cityName;
   makeAjaxRequest(eventFulURL, consolelogResults );
-
 }
 
-
-
-function formatPhone (number) {
-  if (number.length == 7) {
-    number = number.replace(/(\d{3})(\d{4})/, "$1-$2");
-  } else if (number.length == 10) {
-    number = number.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
-  } else if (number.length > 10) {
-    number = number.replace(/(\d{1})(\d{3})(\d{3})(\d{4})/, "($2) $3-$4");
-  }
-  return number;
-};
 
 function renderResults (result) {
   // store the results globally to be used elsewhere and local storage if needed.
@@ -37,22 +26,32 @@ function renderResults (result) {
   for (i = 0; i < breweryObjects.length; i++) {
     
       var tableRow = $("<tr>");
-      tableRow.append('<td style="width: 10%; text-align: center" class="col"><button class="detailBtn Btn" type="button" data-toggle="modal" data-index=' + [i] + ' data-target="#breweryDetail"><i class="fas fa-info-circle"></i></button></td>');
+      tableRow.append('<td style="width: 10%; text-align: center" class="col"><button class="detailBtn Btn" type="button" data-toggle="modal" data-index=' + [i] + ' data-target="#breweryDetail"><i class="fas fa-info-circle"></i></button><button class="editBtn Btn d-flex" type="button" data-toggle="modal" data-index=' + [i] + '><i class="far fa-edit"></i></button></td>');
+
       tableRow.append('<td style="width: 50%; text-align: left" class="col">' + breweryObjects[i].name + '</td>');
       var phone = formatPhone(breweryObjects[i].phone);
       tableRow.append('<td style="width: 40%; text-align: center" class="col">' + phone + '</td>');
       $('tbody').append(tableRow);
-      
+      beerEvents("miami")
     }
   // DEBUG   
   consolelogResults(result)
 };
 
 
+function checkLocal() {
+  breweryObjects = JSON.parse(localStorage.getItem("Brewery-"));
+  if (breweryObjects === null){
+    return null;   
+  } 
+  else {
+    return breweryObjects;
+  }
+};
 
-// DEBUG FUNCTION TO CONSOLE LOG ANYTHING
-function consolelogResults (result) {
-   console.log(result);
+
+function writeLocal (brewID, brewObject) {
+  localStorage.setItem("Brewery-" + brewID , JSON.stringify(brewObject));
 };
 
 $(document).on("click", ".detailBtn", function(){
@@ -69,11 +68,10 @@ $(document).on("click", ".detailBtn", function(){
   }
 });
 
-$('#thriftyBtn').on("click", function(){
+$('#thirstyBtn').on("click", function(){
 // This will be the ID's for the input.
 var cityName = $('#searchCity').val();
 randomByCity(cityName);
-
 })
 
 //Used to ignore input, hardcode search
