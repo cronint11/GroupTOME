@@ -7,12 +7,49 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/763a059f45.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/styles/main.css">
 
-    <title>Google Maps</title>
+    <title>IPA Anonymous</title>
   </head>
-<body>
+  <body>
 
+    <!-- Person A Code starts here -->
+    <div class="row">
+      <div id="top" class="col-12 text-center">IPA Anonymous</div>
+    </div>
+    <div class="row">
+      <div id="params" class="col-6">
+        <button>Im thirsty!</button>
+        <button>Search near by</button>
+        <select name="Select Type">
+          <option value="beerType">Beer Type</option>
+          <option value="beerName">Beer Name</option>
+          <option value="brewryName">Brewry</option></select>
+      </div>
+      <div class="col-6">
+        <table style="width: 50%" class="table table-hover table-striped table-bordered">
+          <thead>
+            <tr>
+              <th style="width: 10%" class="col-1 text-center">Details</th>
+              <th style="width: 50%" class="col-6 text-center">Brewery</th>
+              <th style="width: 40%" class="col-5 text-center">Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Results go here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <div id="selection" class="row">
+      <div id="breweryInfo" class="col-3"></div>
+      <div id="map" class="col-9"></div>
+    </div>
+
+    <!-- Person A Code ends Here -->
+  <!-- MArsalis  
   <div class="container-fluid">
     <div class="row">
       <div class="col">
@@ -35,13 +72,12 @@
       </div>
     </div>
   </div>
-    <!-- Person A Code starts here -->
-    <!-- Person A Code ends Here -->
+                  -->
     <!-- Person B Code starts here -->
+    <footer><nav><button id="history">history</button><button id="beerNotes"><i class="fas fa-beer"></i><i class="far fa-clipboard"></i></button><button id="settings"><i class="fas fa-cogs"></i></button></nav></footer>
     <!-- Person B Code ends Here -->
     <!-- Optional JavaScript -->
     
-  </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
