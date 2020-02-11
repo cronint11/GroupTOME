@@ -58,10 +58,14 @@ $(document).on("click", ".detailBtn", function(){
   }
 });
 
-$('#thriftyBtn').on("click", function(){
+$('#thirstyBtn').on("click", function(){
 // This will be the ID's for the input.
 var cityName = $('#searchCity').val();
-randomByCity(cityName);
+if (cityName) {
+  randomByCity(cityName);
+} else {
+  randomByCity("Miami");
+}
 
 })
 

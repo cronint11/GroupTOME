@@ -1,4 +1,4 @@
-# Group Tome
+# Group TOME
 
 Four software designers who really appreciate the value of beer.
 

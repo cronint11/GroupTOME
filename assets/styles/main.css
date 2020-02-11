@@ -1,6 +1,8 @@
 div{
     min-height: 50px;
-    background-color: ivory;
+    /* background-color: ivory; */
+    margin: 0px;
+    padding: 0px;
 }
 
 img{
@@ -25,11 +27,36 @@ body {
 }
 
 .row {
-    padding: 0px;
+    padding: 10px;
 }
 
-#selection {
+.jumbotron {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 0px;
+    background-color: ivory;
+}
+
+#results {
+    max-height: 300px;
+}
+/* #params, #results, */ #selection {
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#selection { 
     margin-bottom: 32px; /* needs to be the same height as the footer */
+}
+
+#top {
+
+}
+
+#breweryInfo, #maps {
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 #history, #beerNotes, #settings {
