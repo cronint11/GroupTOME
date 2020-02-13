@@ -26,7 +26,9 @@ function renderResults (result) {
   for (i = 0; i < breweryObjects.length; i++) {
     
       var tableRow = $("<tr>");
-      tableRow.append('<td style="width: 10%; text-align: center" class="col"><button class="detailBtn Btn" type="button" data-toggle="modal" data-index=' + [i] + ' data-target="#breweryDetail"><i class="fas fa-info-circle"></i></button><button class="editBtn Btn d-flex" type="button" data-toggle="modal" data-index=' + [i] + '><i class="far fa-edit"></i></button></td>');
+      tableRow.append('<td style="width: 10%; text-align: center" class="col"><button class="detailBtn Btn" type="button"' 
+      // data-toggle="modal"
+      +' data-index=' + [i] + ' data-target="#breweryDetail"><i class="fas fa-info-circle"></i></button><button class="editBtn Btn d-flex" type="button" data-toggle="modal" data-index=' + [i] + '><i class="far fa-edit"></i></button></td>');
 
       tableRow.append('<td style="width: 50%; text-align: left" class="col">' + breweryObjects[i].name + '</td>');
       var phone = formatPhone(breweryObjects[i].phone);
@@ -66,6 +68,8 @@ $(document).on("click", ".detailBtn", function(){
   if(breweryObjects[index].website_url){
   $("<a>").attr("href", breweryObjects[index].website_url).text(breweryObjects[index].website_url).appendTo($('.modal-body').append("<br>"));
   }
+
+  $("#breweryInfo").html("<h4>"+breweryObjects[index].name+"</h4>"+$('.modal-body').html());
 });
 
 $('#thirstyBtn').on("click", function(){
