@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+<title>Google Maps</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h1>Google Maps</h1>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col">
+      <input class="form-control" id="search" type="text" placeholder="Search For Beer..." />
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <button type="button" type="text">Get Lucky</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div id="map"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="main.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=createMap&key=AIzaSyBbxB1MpsCcOhzGs_uZQKFlUWw4EXugmiE"
+      async defer></script>
+</body>
+    
+</html>
