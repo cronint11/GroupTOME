@@ -39,7 +39,10 @@
     <div class="container-fluid">
       <div class="row">
         <div id="params" class="col-6">
-          <button id="thirstyBtn">Im thirsty!</button>
+          <input type="city" id="location" name="city" placeholder="enter city">
+          <input type="radio" id="breweries" name="searchType" value="breweries" checked><label for="breweries">Breweries</label>
+          <input type="radio" id="events" name="searchType" value="events"><label for="events">Events</label>
+          <button id="thirstyBtn" class="btn btn-light btn-lg">Im thirsty!</button>
           <!-- <button>Search near by</button>
           <select name="Select Type">
             <option value="beerType">Beer Type</option>
