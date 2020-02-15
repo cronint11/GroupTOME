@@ -45,6 +45,27 @@ function formatPhone (number) {
   return number;
 };
 
+
+function getSearchType() {
+  var type = $('input[name=searchType]:checked').val();
+  return type;
+}
+
+$('input[name=searchType]').on("click", function(event){
+  var selected = $(this).attr('id');
+
+  if(selected === "breweries") {
+    $('#thirstyBtn').text("Im thirsty!");
+    $('th:nth-child(2)').text("Brewery");
+    $('th:nth-child(3)').text("Phone");
+  } 
+  else if (selected === "events")
+  {
+    $('#thirstyBtn').text("Where's the fun!");
+    $('th:nth-child(2)').text("Event Description");
+    $('th:nth-child(3)').text("Date");
+  }
+})
 /*  
   Carlos's Code Ends Here
 */
