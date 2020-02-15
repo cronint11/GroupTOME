@@ -61,10 +61,10 @@ function renderResults (result) {
       var phone = formatPhone(breweryObjects[i].phone);
       tableRow.append('<td style="width: 40%; text-align: center" class="col">' + phone + '</td>');
       $('tbody').append(tableRow);
-      //beerEvents("miami")
+  
     }
   // DEBUG   
-  consolelogResults(result)
+  //consolelogResults(result)
 };
 
 
@@ -98,6 +98,8 @@ $(document).on("click", ".detailBtn", function(){
   }
 
   $("#breweryInfo").html("<h4>"+breweryObjects[index].name+"</h4>"+$('.modal-body').html());
+
+  Location(breweryObjects[index].name);
 });
 
 $(document).on("click", ".editBtn", function(){
@@ -126,11 +128,18 @@ $(document).on("click", ".editBtn", function(){
 $('#thirstyBtn').on("click", function(){
 // This will be the ID's for the input.
 var cityName = $('#location').val();
+var searchType = getSearchType();
 
-if(!cityName){
-  cityName = "Miami";
+if (searchType === "breweries") {
+  if(!cityName){
+    cityName = "Miami";
+  }
+  randomByCity(cityName);
+} else if (searchType === "events") {
+  //TODO: Change this to display actual events 
+  beerEvents("miami")
+  alert ("This is where the events would go");
 }
-randomByCity(cityName);
 
 })
 
