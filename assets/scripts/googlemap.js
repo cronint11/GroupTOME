@@ -1,19 +1,28 @@
 var map;
 
-function createMap () {
-    var options = {
-       center: { lat: 25.800254, lng: -80.2009170923563 },
-       zoom: 12,
-    
-    };
-    var marker = new google.maps.Marker(
-        {position: { lat: 25.800254, lng: -80.2009170923563 },
-        map: map
-        });
 
-    map = new google.maps.Map(document.getElementById('map'), options);
-    console.log(options);
+function createMap(long,latt) {
+    // The location of Miami//
+    var world = {lat: parseFloat(latt), lng: parseFloat(long) };
+    // The map, centered at Miami//
+    var map = new google.maps.Map(
+        document.getElementById('map'), {zoom: 15, center: {lat: latt, lng: long }});
+    // The marker, positioned at Miami//
+    var marker = new google.maps.Marker({position: world, map: map});
 }
-function Location (name) {
-    var googlemaps = "https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyBbxB1MpsCcOhzGs_uZQKFlUWw4EXugmiE&address=" + name;
-    makeAjaxRequest(googlemaps, consolelogResults )};
+
+
+function Location (location) {
+    var googlemaps = "https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyBbxB1MpsCcOhzGs_uZQKFlUWw4EXugmiE&address=" + location;
+    $.ajax({
+        url: googlemaps,
+        method: "GET"
+    }).then(function(response) {
+
+
+    var long = response.results[0].geometry.location.lng;
+    var lat = response.results[0].geometry.location.lat;
+
+createMap(long, lat);
+}
+)}
