@@ -125,7 +125,7 @@ $(document).on("click", ".editBtn", function(){
 
 $('#thirstyBtn').on("click", function(){
 // This will be the ID's for the input.
-var cityName = $('#searchCity').val();
+var cityName = $('#location').val();
 
 if(!cityName){
   cityName = "Miami";
