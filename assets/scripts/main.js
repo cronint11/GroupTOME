@@ -23,6 +23,7 @@ function makeAjaxRequest(url, callback) {
       
       callback(response);
     })
+    
 };
 
 /*  

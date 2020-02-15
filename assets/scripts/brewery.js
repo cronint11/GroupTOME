@@ -12,7 +12,7 @@ function randomByCity (city) {
 function beerEvents (city) {
   var cityName = city;
   var eventFulURL = "https://cors-anywhere.herokuapp.com/http://api.eventful.com/json/events/search?keywords=beer&app_key=dSgcPNSbCFTGkjzg&location=" + cityName;
-  makeAjaxRequest(eventFulURL, consolelogResults );
+  makeAjaxRequest(eventFulURL, renderEvents );
 }
 
 function renderResults (result) {
@@ -137,8 +137,11 @@ if (searchType === "breweries") {
   randomByCity(cityName);
 } else if (searchType === "events") {
   //TODO: Change this to display actual events 
-  beerEvents("miami")
-  alert ("This is where the events would go");
+  if(!cityName){
+    cityName = "Miami";
+  }
+  beerEvents(cityName);
+
 }
 
 })

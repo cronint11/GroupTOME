@@ -1,18 +1,12 @@
-function renderResults (result) {
+function renderEvents (result) {
   // store the results globally to be used elsewhere and local storage if needed.
   var searchType = getSearchType();
 
-  breweryObjects = result;
+  breweryObjects = JSON.parse(result);
+  //var name = breweryObjects.events[0].event.title
+  console.log(breweryObjects);
   $('tbody').empty();
-
-  if (searchType === "events") {
-    $('th:nth-child(2)').text("Event Description");
-    $('th:nth-child(3)').text("Date");
-  } 
-  else if (searchType === "breweries") {
-    $('th:nth-child(2)').text("Brewery");
-    $('th:nth-child(3)').text("Phone");
-  }
+/*
   for (i = 0; i < breweryObjects.length; i++) {
     
       var editBtn = $("<a>").attr({
@@ -51,7 +45,14 @@ function renderResults (result) {
  
       tableRow.append(buttonCol);
 
-      tableRow.append('<td style="width: 50%; text-align: left" class="col">' + breweryObjects[i].name + '</td>');
+      if (searchType === "brewery"){
+      var name = breweryObjects[i].name;
+      }
+      else if (searchType === "events"){
+      ;
+      }
+      console.log(name);
+      tableRow.append('<td style="width: 50%; text-align: left" class="col">' + name + '</td>');
       var phone = formatPhone(breweryObjects[i].phone);
       tableRow.append('<td style="width: 40%; text-align: center" class="col">' + phone + '</td>');
       $('tbody').append(tableRow);
@@ -59,4 +60,5 @@ function renderResults (result) {
     }
   // DEBUG   
   //consolelogResults(result)
+  */
 };
