@@ -38,6 +38,7 @@ function renderResults (result) {
         class:"detailBtn Btn d-inline text-muted",
         href:"#",
         type:"button",
+        'data-toggle': "modal",
         'data-target': "#breweryDetail"
         });
       var infoIcon = $('<i>').addClass("fas fa-info-circle");
@@ -96,8 +97,6 @@ $(document).on("click", ".detailBtn", function(){
   if(breweryObjects[index].website_url){
   $("<a>").attr("href", breweryObjects[index].website_url).text(breweryObjects[index].website_url).appendTo($('.modal-body').append("<br>"));
   }
-
-  $("#breweryInfo").html("<h4>"+breweryObjects[index].name+"</h4>"+$('.modal-body').html());
 });
 
 $(document).on("click", ".editBtn", function(){
@@ -125,7 +124,7 @@ $(document).on("click", ".editBtn", function(){
 
 $('#thirstyBtn').on("click", function(){
 // This will be the ID's for the input.
-var cityName = $('#location').val();
+var cityName = $('#searchCity').val(); 
 
 if(!cityName){
   cityName = "Miami";
