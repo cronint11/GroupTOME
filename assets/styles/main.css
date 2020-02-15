@@ -39,8 +39,8 @@ body {
     background: none;
 }
 
-#results {
-    max-height: 300px;
+#results, #breweryHistory, #eventHistory {
+    max-height: 500px;
     background: rgba(255, 255, 255, 0.7);
     padding: 0px;
 }
