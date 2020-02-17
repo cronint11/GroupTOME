@@ -111,7 +111,7 @@ if (searchType === "breweries"){
     $("<a>").attr("href", breweryObjects[index].website_url).text(breweryObjects[index].website_url).appendTo($('.modal-body').append("<br>"));
   }
   $("#breweryInfo").html("<h4>" + breweryObjects[index].name + "</h4>" + $('.modal-body').html());
-  Location(breweryObjects[index].name + breweryObjects[index.street]);
+  Location(breweryObjects[index].name.trim() + breweryObjects[index].street.trim() + breweryObjects[index].postal_code);
 }
 else if (searchType === "events"){
   $('#breweryInfo').html("<h4>" + breweryObjects[index].title + "</h4>");
@@ -159,6 +159,8 @@ $(document).on("click", ".editBtn", function () {
 
 $('#thirstyBtn').on("click", function () {
   // This will be the ID's for the input.
+  $('#breweryInfo').empty();
+  $('#map').empty();
   var cityName = $('#location').val();
   searchType = getSearchType();
 
