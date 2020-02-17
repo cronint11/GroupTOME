@@ -1,8 +1,20 @@
-/*  
-  Generic Functions from template
-*/
+// var map;
+
+// function createMap () {
+//     var options = {
+//        center: { lat: 25.800254, lng: -80.2009170923563 },
+//        zoom: 12,
+//     };
+
+//     map = new google.maps.Map(document.getElementById('map'), options);
+
+// }
+  
 function displayAPIStuff(a,b,c,d) {
 /* Comments Here
+  describe a,b,c,d etc...
+  Name of 
+
 */
 };
 
@@ -25,26 +37,3 @@ function makeAjaxRequest(url, callback) {
     })
 };
 
-/*  
-  Carlos's Code Starts Here
-*/
-
-// DEBUG FUNCTION TO CONSOLE LOG ANYTHING
-function consolelogResults (result) {
-  console.log(result);
-};
-
-function formatPhone (number) {
-  if (number.length == 7) {
-    number = number.replace(/(\d{3})(\d{4})/, "$1-$2");
-  } else if (number.length == 10) {
-    number = number.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
-  } else if (number.length > 10) {
-    number = number.replace(/(\d{1})(\d{3})(\d{3})(\d{4})/, "($2) $3-$4");
-  }
-  return number;
-};
-
-/*  
-  Carlos's Code Ends Here
-*/
