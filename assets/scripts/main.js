@@ -1,27 +1,22 @@
 /*  
   Generic Functions from template
 */
-function displayAPIStuff(a,b,c,d) {
-/* Comments Here
-*/
-};
 
-function getAPIStuff(){
-  makeAjaxRequest(URL, function (response) {
-    // get something a,b,c,d
-    displayAPIStuff(a,b,c,d);
-  })
-}
+var searchType;
 
 function makeAjaxRequest(url, callback) {
   $.ajax (
     {
       url: url,
-      method: "GET"
-
+      method: "GET",
+      // this headers section is necessary for CORS-anywhere
+      headers: {
+        "x-requested-with": "xhr" 
+      }
     }).then(function(response){
-      
       callback(response);
+    }).fail(function(jqXHR, textStatus) { 
+      console.error(textStatus)
     })
 };
 
@@ -45,6 +40,45 @@ function formatPhone (number) {
   return number;
 };
 
+
+function getSearchType() {
+  var type = $('input[name=searchType]:checked').val();
+  return type;
+}
+
+function updateHeaders() {
+  
+  if(searchType === "breweries") {
+    $('th:nth-child(2)').text("Brewery");
+    $('th:nth-child(3)').text("Phone");
+  } 
+  else if (searchType === "events")
+  {
+    $('th:nth-child(2)').text("Event Description");
+    $('th:nth-child(3)').text("Date");
+  }
+}
+
+
+$('input[name=searchType]').on("click", function(){
+  var selected = $(this).attr('id');
+
+  // Changes the button text.
+  if (selected === "breweries") {
+    $('#thirstyBtn').text("Im thirsty!");
+    searchType = selected;
+  } 
+  else if (selected === "events")
+  {
+    $('#thirstyBtn').text("Where's the fun!"); 
+    searchType = selected;
+  }
+
+  // Updates headers only if nothing in table.
+  if ($('tbody > tr').length < 1) {
+    updateHeaders();
+  }
+})
 /*  
   Carlos's Code Ends Here
 */
