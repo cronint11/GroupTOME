@@ -28,6 +28,55 @@ body {
     background-size: cover;
 }
 
+/* table {
+    text-align: left;
+    position: relative;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.25rem;
+} */
+
+tr.header th {
+    background-color: black;
+    color: goldenrod;
+}
+
+.table-fixed tbody {
+    /* height: 300px; */
+    overflow-y: auto;
+    width: 100%;
+}
+
+.table-fixed thead,
+.table-fixed tbody,
+.table-fixed tr,
+.table-fixed td,
+.table-fixed th {
+    display: block;
+}
+
+.table-fixed tbody td,
+.table-fixed tbody th,
+.table-fixed thead > tr > th {
+    float: left;
+    position: relative;
+
+    /* &::after {
+        content: '';
+        clear: both;
+        display: block;
+    } */
+}
+
+/* th {
+    background: white;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+} */
+
 .row {
     padding: 20px;
 }
@@ -42,6 +91,7 @@ body {
 #results, #breweryHistory, #eventHistory {
     max-height: 500px;
     background: rgba(255, 255, 255, 0.7);
+    /* opacity: 0.7; */
     padding: 0px;
 }
 /* #params, #results, #selection {
