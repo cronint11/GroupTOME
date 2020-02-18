@@ -131,6 +131,7 @@ else if (searchType === "events"){
   Location(breweryObjects[index].venue_name.trim() + breweryObjects[index].venue_address.trim() );
 }
 
+$("#breweryInfo").css("display","block");
 
 });
 
@@ -179,6 +180,7 @@ $('#thirstyBtn').on("click", function () {
     updateHeaders(searchType);
   }
 
+  $("#breweryInfo").css("display","none");
 })
 
 //Used to ignore input, hardcode search
