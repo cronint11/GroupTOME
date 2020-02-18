@@ -6,8 +6,8 @@
 //   output.innerHTML = this.value;
 // }
 
-var myJson= {
-    "BreweryName": "Biscayne Bay Brewery",
+var myJson={
+    "BreweryName": "Current Brewery",
     "BeerNotes": [{
         "Name": "Beer1",
         "ABV": 4.5,
@@ -31,7 +31,13 @@ var myJson= {
         "Rating": 4.8
         }
     ]
-}
+};
 console.log(myJson);
 
 $("#brewery").text(myJson.BreweryName);
+for (var i=0; i<myJson.BeerNotes.length; i++){
+    $(".row").html("<input id='beername"+i+"' value='"+myJson.BeerNotes[i].Name+"'>");
+     break;
+    //code to create a row for myJSON.BeerNotes[i]
+    }
+    //code to add a blank row

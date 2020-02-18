@@ -17,11 +17,26 @@
     <div class="jumbotron">
       <div id="top" class="col-12 text-center"><b>IPA Anonymous</b></div>
     </div>
+    <div id="brewery"></div>
     <div class="container-fluid">
-      <div class="row">
-        <div id="brewery"></div>
-
-      </div>    
+      <div class="row-1">
+        <input id="Name" placeholder="Beer Name" type="text">
+      </div>
+      <div class="row-2">
+        <input id="ABV" type="range" min="1" max="75" value="0">ABV
+        <div class="row-3">
+          <input id="IBU" min="1" max="75" value="0" type="range">IBU
+        </div>
+        <div class="row-4">
+          <input id="Style" placeholder="Beer Type" type="text">   
+      </div>
+      <div class="row-5">
+        <input id="Notes" placeholder="Additional Notes" type="text">
+      </div>
+      <div class="row-6">
+        <input id="Rating" min="1" max="10" value="0" type="range">Rating
+    </div>
+    <button>Submit</button>
     </div>
 
   <!-- Person A Code ends Here -->
@@ -38,7 +53,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="assets/scripts/brewery.js"></script>
     
-    <script src="assets/scripts/main.js"></script>
-    <script src="assets/scripts/styles.js"></script>
+    <script src="assets/scripts/main.js"></script> 
+    <script src="assets/scripts/styles.js"></script> 
   </body>
 </html>
