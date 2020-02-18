@@ -1,3 +1,11 @@
+
+/* div{
+    min-height: 50px;
+    background-color: ivory;
+    margin: 0px;
+    padding: 0px;
+} */
+
 img{
     height: 20px;
     width: auto;
@@ -11,7 +19,7 @@ footer {
     background-color: gold;
     left: 0;
     bottom: 0;
-    height: 50px;
+    height: 30px;
     padding: 0px;
 }
 
@@ -20,13 +28,8 @@ body {
     background-size: cover;
 }
 
-tr.header th, #thirstyBtn, .inactiveNav {
-    background-color: black;
-    color: goldenrod;
-}
-
 .row {
-    padding: 15px;
+    padding: 20px;
 }
 
 .jumbotron {
@@ -37,44 +40,36 @@ tr.header th, #thirstyBtn, .inactiveNav {
 }
 
 #results, #breweryHistory, #eventHistory {
-    max-height: 300px;
+    max-height: 500px;
     background: rgba(255, 255, 255, 0.7);
-    /* opacity: 0.7; */
     padding: 0px;
 }
+/* #params, #results, #selection {
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+} */
 
 #selection { 
     margin-bottom: 32px; /* needs to be the same height as the footer */
 }
 
+#top {
+
+}
+
 #breweryInfo {
-    background: rgba(255, 255, 255, 0.7);
+    padding-left: 0px;
+    padding-right: 10px;
 }
 
-#searchTBody, #breweryInfo {
-    display: none;
+#history, #beerNotes, #settings {
+    width: 33.33%;
+    height: 100%;
 }
 
-#searchTab, #historyTab, #notesTab, #settingsTab {
-    width: 25%;
-    height: 50px;    
-}
 
-.activeNav {
-    background-color: goldenrod;
-    color: black;
-}
-
-i {
-    font-size: 35px;
-}
-
-#map, #params {
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-#map {
-    width: 100%;
-    padding-top: 75%;
-}
+/* #map {
+    height: 500px;
+    width: 500px;
+} */
