@@ -58,7 +58,7 @@ function renderResults(result) {
       style: "width:20%; text-align: center",
       class: "col align-center "
     });
-    buttonCol.append(infoBtn, editBtn)
+    buttonCol.append(infoBtn); //, editBtn)
     var tableRow = $("<tr>").attr("data-row", i);
     tableRow.addClass("breweryRow");
 
