@@ -55,7 +55,7 @@ function renderResults(result) {
     infoBtn.append(infoIcon);
 
     var buttonCol = $('<td>').attr({
-      style: "width:20%; text-align: center",
+      style: "width:7%; text-align: center",
       class: "col align-center "
     });
     buttonCol.append(infoBtn); //, editBtn)
@@ -74,7 +74,7 @@ function renderResults(result) {
       var detail = moment(breweryObjects[i].start_time).format("MMM Do, YYYY");
     }
     tableRow.append('<td style="width: 50%; text-align: left" class="col">' + name + '</td>');
-    tableRow.append('<td style="width: 40%; text-align: center" class="col">' + detail + '</td>');
+    tableRow.append('<td style="width: 43%; text-align: center" class="col">' + detail + '</td>');
     $('tbody').append(tableRow);
   }
 };
