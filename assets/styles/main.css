@@ -25,13 +25,11 @@ footer {
 
 body {
     background-image: url("../images/background.jpg");
-    background-size: 375px 812px;
-    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .row {
-    padding: 0px;
-
+    padding: 20px;
 }
 
 .jumbotron {
@@ -53,23 +51,12 @@ body {
 } */
 
 #selection { 
-    margin-bottom: 52px; /* needs to be the same height as the footer */
+    margin-bottom: 32px; /* needs to be the same height as the footer */
 }
 
+#top {
 
-#breweryInfo {
-    background: rgba(255, 255, 255, 0.7);
-    margin-top: 10px;
-    margin-left: 15px;
-    margin-right: -15px;
-    padding: 2px;
 }
-
-/* #searchTBody, */
- #breweryInfo {
-    display: none;
-}
-
 
 #breweryInfo {
     padding-left: 0px;
@@ -82,28 +69,7 @@ body {
 }
 
 
-#map {
-    width: 100%;
-    padding-top: 75%;
-}
-
-#top {
-    font-family: 'Lobster', cursive;
-    font-size: 45px;
-    color: goldenrod;
-    text-shadow: 2px 2px black;
-}
-
-#subtitle {
-    font-family: 'Lobster', cursive;
-}
-
-#params, #results, h4 {
-    font-size: 10px;
-}
-
-.col {
-    padding-right: 5px;
-    padding-left: 5px;
-}
-
+/* #map {
+    height: 500px;
+    width: 500px;
+} */
