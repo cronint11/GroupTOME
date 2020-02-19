@@ -32,6 +32,7 @@
 //         }
 //     ]
 // };
+
 // console.log(myJson);
 
 // $("#brewery").text(myJson.BreweryName);
