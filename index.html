@@ -42,28 +42,32 @@
     <!-- Search -->
     <div id="searchDiv" class="container-fluid">
       <div class="row">
-        <div id="params" class="col-6">
-          <input type="city" id="location" name="city" placeholder="enter city">
-          <input type="radio" id="breweries" name="searchType" value="breweries" checked><label for="breweries">Breweries</label>
-          <input type="radio" id="events" name="searchType" value="events"><label for="events">Events</label>
-          <button id="thirstyBtn" class="btn btn-light btn-lg">Im thirsty!</button>
-          <!-- <button>Search near by</button>
-          <select name="Select Type">
-            <option value="beerType">Beer Type</option>
-            <option value="beerName">Beer Name</option>
-            <option value="brewryName">Brewry</option></select> -->
+        <div class="col-5">
+          <div id="params" class="row">
+            <div class="col">
+              <input type="city" id="location" name="city" placeholder="enter city">
+              <br>
+              <input type="radio" id="breweries" name="searchType" value="breweries" checked><label for="breweries"><b>Breweries</b></label>
+              <input type="radio" id="events" name="searchType" value="events"><label for="events"><b>Events</b></label>
+            </div>
+            <div class="col">
+              <button id="thirstyBtn" class="btn btn-light btn-lg">I'm thirsty!</button>
+            </div>
+            <div class="row">
+              <div id="breweryInfo" class="col-12 text-wrap text-break"></div>
+            </div>
+          </div>
         </div>
-        <div id="results" class="col-6 overflow-auto">
-          <table style="width: 100%" class="table table-hover table-striped table-bordered">
+        <div id="results" class="col-7 overflow-auto table-responsive">
+          <table class="table table-fixed table-hover table-striped table-bordered">
             <thead>
               <tr class="header">
                 <th style="width: 7%;" class="col-1 text-center">Info</th>
-
                 <th style="width: 50%" class="col-6 text-center">Brewery</th>
                 <th style="width: 43%" class="col-5 text-center">Phone</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="searchTBody">
               <!-- Results go here -->
             </tbody>
           </table>
@@ -71,8 +75,7 @@
       </div>
         
       <div id="selection" class="row">
-        <div id="breweryInfo" class="col-3 text-wrap text-break"></div>
-        <div id="map" class="col-9"></div>
+        <div id="map" class="col"></div>
       </div>
     </div>
     <!-- End Search Div -->
@@ -118,7 +121,6 @@
     <footer><nav><button id="searchTab" class="activeNav navButton"><i class="fas fa-search"></i></button><button id="notesTab" class="inactiveNav navButton"><i class="fas fa-beer"></i><i class="far fa-clipboard"></i></button><button id="historyTab" class="inactiveNav navButton"><i class="fas fa-search"></i><i class="far fa-clipboard"></i></button><button id="settingsTab" class="inactiveNav navButton"><i class="fas fa-cogs"></i></button></nav></footer>
     <!-- Navigation Code ends Here -->
 
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -132,8 +134,7 @@
     <!--Google Maps//-->
     <script src="assets/scripts/googlemap.js"></script>
     <script src="assets/scripts/main.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?callback=createMap&libraries=places&key=AIzaSyBbxB1MpsCcOhzGs_uZQKFlUWw4EXugmiE" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBbxB1MpsCcOhzGs_uZQKFlUWw4EXugmiE" async defer></script>
 
-    
   </body>
 </html>

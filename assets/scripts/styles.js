@@ -81,12 +81,16 @@ function LoadNotes() {
 function LoadHistory() {}
 function LoadSettings() {}
 
-
-$(window).resize(function(){
+function LoadCSS() {
    var width = window.innerWidth;
    var fontSize = width/36;
    $('body').css('background-size', width+'px '+window.innerHeight+'px');
    $('#params').css('font-size', fontSize+'px');
    $('#results').css('font-size', fontSize+'px');
-//    $('h4').css('font-size', fontSize+'px');
+}
+
+LoadCSS();
+
+$(window).resize(function(){
+   LoadCSS();
 });
