@@ -55,8 +55,10 @@ function renderResults(result) {
     infoBtn.append(infoIcon);
 
     var buttonCol = $('<td>').attr({
-      style: "width:20%; text-align: center",
-      class: "col align-center "
+
+      style: "width:7%; text-align: center",
+      class: "col align-center"
+
     });
     buttonCol.append(infoBtn, editBtn)
     var tableRow = $("<tr>").attr("data-row", i);
@@ -110,11 +112,11 @@ if (searchType === "breweries"){
   if (breweryObjects[index].website_url) {
     $("<a>").attr("href", breweryObjects[index].website_url).text(breweryObjects[index].website_url).appendTo($('.modal-body').append("<br>"));
   }
-  $("#breweryInfo").html("<h4>" + breweryObjects[index].name + "</h4>" + $('.modal-body').html());
+  $("#breweryInfo").html("<b>" + breweryObjects[index].name + "</b><br>" + $('.modal-body').html());
   Location(breweryObjects[index].name.trim() + breweryObjects[index].street.trim() + breweryObjects[index].postal_code);
 }
 else if (searchType === "events"){
-  $('#breweryInfo').html("<h4>" + breweryObjects[index].title + "</h4>");
+  $('#breweryInfo').html("<b>" + breweryObjects[index].title + "</b>");
   $('#breweryInfo').append("<br>" + breweryObjects[index].venue_name)
   if (breweryObjects[index].url) {
     $("<a>").attr({
@@ -131,6 +133,7 @@ else if (searchType === "events"){
   Location(breweryObjects[index].venue_name.trim() + breweryObjects[index].venue_address.trim() );
 }
 
+$("#breweryInfo").css("display","block");
 
 });
 
@@ -179,6 +182,7 @@ $('#thirstyBtn').on("click", function () {
     updateHeaders(searchType);
   }
 
+  $("#breweryInfo").css("display","none");
 })
 
 //Used to ignore input, hardcode search

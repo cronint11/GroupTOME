@@ -40,4 +40,25 @@ for (var i=0; i<myJson.BeerNotes.length; i++){
      break;
     //code to create a row for myJSON.BeerNotes[i]
     }
-    //code to add a blank row
+}
+
+function LoadNotes() {
+    $('#notesDiv').html($('#breweryInfo').html());
+}
+
+function LoadHistory() {}
+function LoadSettings() {}
+
+function LoadCSS() {
+   var width = window.innerWidth;
+   var fontSize = width/36;
+   $('body').css('background-size', width+'px '+window.innerHeight+'px');
+   $('#params').css('font-size', fontSize+'px');
+   $('#results').css('font-size', fontSize+'px');
+}
+
+LoadCSS();
+
+$(window).resize(function(){
+   LoadCSS();
+});
