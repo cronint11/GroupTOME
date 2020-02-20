@@ -17,9 +17,11 @@ footer {
 
 body {
     background-image: url("../images/background.jpg");
+
     background-size: 375px 812px;
     /* background-size: 100vw 100vw; */
     background-repeat: no-repeat;
+
 }
 
 tr.header th, #thirstyBtn, .inactiveNav {
@@ -45,7 +47,7 @@ tr.header th, #thirstyBtn, .inactiveNav {
 }
 
 #selection { 
-    margin-bottom: 52px; /* needs to be the same height as the footer */
+    margin-bottom: 32px; /* needs to be the same height as the footer */
 }
 
 #breweryInfo {
@@ -79,6 +81,7 @@ i {
     padding-left: 5px;
     padding-right: 5px;
 }
+
 
 #map {
     width: 100%;

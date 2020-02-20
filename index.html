@@ -8,7 +8,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/763a059f45.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/main.css">
 
     <title>IPA Anonymous</title>
@@ -33,14 +32,11 @@
         </div>
       </div>
     </div>
-
+    <!-- Person A Code starts here -->
     <div class="jumbotron">
       <div id="top" class="col-12 text-center"><b>IPA Anonymous</b></div>
-      <div id="subtitle" class="col-12 text-center">"Finding the unknown"</div>
     </div>
-    
-    <!-- Search -->
-    <div id="searchDiv" class="container-fluid">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-5">
           <div id="params" class="row">
@@ -64,7 +60,7 @@
               <tr class="header">
                 <th style="width: 7%;" class="col-1 text-center">Info</th>
                 <th style="width: 50%" class="col-6 text-center">Brewery</th>
-                <th style="width: 43%" class="col-5 text-center">Phone</th>
+                <th style="width: 40%" class="col-5 text-center">Phone</th>
               </tr>
             </thead>
             <tbody id="searchTBody">
@@ -78,43 +74,26 @@
         <div id="map" class="col"></div>
       </div>
     </div>
-    <!-- End Search Div -->
 
-    <!-- Notes Div -->
-    <div id="notesDiv" style="display:none" class="container-fluid">
-      <!-- <div class="container-fluid">
-        <div class="row-1">
-          <input id="Name" placeholder="Beer Name" type="text">
-        </div>
-        <div class="row-2">
-          <input id="ABV" type="range" min="1" max="75" value="0">ABV
-          <div class="row-3">
-            <input id="IBU" min="1" max="120" value="0" type="range">IBU
-          </div>
-          <div class="row-4">
-            <input id="Style" placeholder="Beer Type" type="text">   
-        </div>
-        <div class="row-5">
-          <input id="Notes" placeholder="Tasting Notes" type="text">
-        </div>
-        <div class="row-6">
-          <input id="Rating" min="1" max="5" value="0" type="range">Rating
-        </div>
-        <button>Submit</button>
-      </div> -->
+    <!-- Person A Code ends Here -->
+  <!-- MArsalis  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1 class="display-6">Google Maps</h1>
+      </div>
     </div>
-    <!-- End Notes Div -->
+    <div class="row mb-2">
+      <div class="col">
+        <input class="form-control" id="search" type="text" placeholder="Search For Beer..." />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <button type="button" type="text">Get Lucky</button>
+      </div>
+    </div>
 
-    <!-- History Div -->
-    <div id="historyDiv" style="display:none" class="container-fluid">
-      <h1>History</h1>
-    </div>
-    <!-- End History Div -->
-
-    <!-- Settings Div -->
-    <div id="settingsDiv" style="display:none" class="container-fluid">
-      <h1>Settings</h1>
-    </div>
     <!-- End Settings Div -->
 
     <!-- Navigation Code starts here -->
@@ -122,14 +101,14 @@
     <!-- Navigation Code ends Here -->
 
     <!-- Optional JavaScript -->
+    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    
+    <!-- <script src="assets/scripts/main.js"></script> -->
     <script src="assets/scripts/brewery.js"></script>
-    <script src="assets/scripts/styles.js"></script>
     
     <!--Google Maps//-->
     <script src="assets/scripts/googlemap.js"></script>
